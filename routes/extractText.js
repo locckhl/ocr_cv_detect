@@ -38,7 +38,7 @@ const keywords = {
   },
   introduction: {
     index: "",
-    value: "自己 PR",
+    value: "PR",
   },
 };
 
@@ -98,7 +98,7 @@ const extractText = async (data) => {
   const phoneNumber = _phoneNumber.split(" ")[0];
 
   const introduction = data
-    .slice(keywords.introduction.index + 5)
+    .slice(keywords.introduction.index + 2)
     .replace(/\s/g, "");
 
   console.log(keywords);
