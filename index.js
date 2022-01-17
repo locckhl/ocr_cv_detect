@@ -4,10 +4,10 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 const session = require("express-session");
-const dotenv = require('dotenv')
+const dotenv = require("dotenv");
 const cors = require("cors");
 
-dotenv.config()
+dotenv.config();
 
 // var indexRouter = require("./routes/index");
 var ocrRouter = require("./routes/ocr");
@@ -32,15 +32,15 @@ app.use(
 );
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: ["http://localhost:3000", "https://itss2-32f90.web.app"],
     credentials: true,
   })
 );
 
 app.get("/", async (req, res) => {
-    res.status(201).json({
-        data: "data"
-    })
+  res.status(201).json({
+    data: "data",
+  });
 });
 
 // ROUTES

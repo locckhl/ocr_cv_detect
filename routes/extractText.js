@@ -83,7 +83,7 @@ const extractText = async (data) => {
   const month = data.slice(keywords.year.index + 1, keywords.month.index);
   const day = data.slice(keywords.month.index + 1, keywords.day.index);
 
-  const birthday = `${day}/${month}/${year}`;
+  const birthday = `${year}-${month}-${day}`.trim();
   const address = data.slice(
     keywords.startAddress.index + 3,
     keywords.endAdress.index
